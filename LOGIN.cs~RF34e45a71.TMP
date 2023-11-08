@@ -1,0 +1,121 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Net.Mail;
+
+namespace PS_Digital_Audit
+{
+    public partial class LOGIN : Form
+    {
+        public static string loginuser = "";
+        public static string loginName = "";
+        public static string loginAutho = "";
+        static string AAA = System.Configuration.ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString;
+        SqlConnection con = new SqlConnection("Data Source=apbiph1131;Initial Catalog=PS Digital Audit;Persist Security Info=True;User ID=saa;Password=P@ssw0rd");
+       
+
+        public void UserVerification()
+        {
+
+            if (txtIDNum.Text == "")
+            {
+                MessageBox.Show("ID Number Required!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtIDNum.Focus();
+            }
+            else
+            {
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString);
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM tbl_PSuser WHERE ID_Number='" + txtIDNum.Text + "'", con);
+                /* in above line the program is selecting the whole data from table and the matching it with the user name and password provided by user. */
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+
+                if (dt.Rows[0][0].ToString() == "1")
+                {
+                    SqlCommand cmd = new SqlCommand("select * from tbl_PSuser where ID_Number ='" + txtIDNum.Text + "'", con);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        string login_user;
+                        string login_name;
+                        string autho;
+
+                        login_user = reader[1].ToString();
+                        login_name = reader[5].ToString();
+                        autho = reader[8].ToString();
+
+                        loginuser = login_user;
+                        loginName = login_name;
+                        loginAutho = autho;
+
+                    }
+
+                    this.Hide();
+                    new Section_Checksheet().Show();
+
+                }
+                else
+                {
+                    MessageBox.Show("Invalid ID.", "Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtIDNum.Text = "";
+                }
+
+            }
+            }
+
+        
+        public LOGIN()
+        {
+            InitializeComponent();
+        }
+
+        private void jebtnOK_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void jeButton2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Add_Account().Show();
+        }
+        private void jeButton1_Click(object sender, EventArgs e)
+        {
+            txtIDNum.Text = "";
+        }
+
+        private void LOGIN_Load(object sender, EventArgs e)
+        {
+           this.lblDate.Text = DateTime.Now.ToString();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+      
+        }
+
+        private void jebtnOK_MouseClick(object sender, MouseEventArgs e)
+        {
+            UserVerification();
+        }
+
+        private void jebtnOK_Click_1(object sender, EventArgs e)
+        {
+
+        }
+    }
+}

@@ -1,0 +1,134 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
+using System.Net.Mail;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace PS_Digital_Audit
+{
+    public partial class AuditFound : Form
+    {
+        public string emailto;
+        private string innerString;
+        string dbconnection = ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString;
+        public AuditFound()
+        {
+            InitializeComponent();
+        }
+
+        private void jeButton4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBacktoAudit_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Audit_Checksheet aaa = new Audit_Checksheet();
+            aaa.ShowDialog();
+            this.Close();
+        }
+
+        private void jeButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Section_Checksheet aaa = new Section_Checksheet();
+            aaa.ShowDialog();
+            this.Close();
+        }
+
+        private void btnNotify_Click(object sender, EventArgs e)
+        {
+            if (txt_EmailAdd.Text == "")
+            {
+                MessageBox.Show("Please Enter ADID/Employee Number");
+            }
+            else
+            {
+                emailto = txt_EmailAdd.Text;
+                EmailBody_Audit();
+                EmailNotif_Audit();
+                emailto = null;
+
+
+                audit_email();
+            }
+        }
+    
+
+       
+        public void audit_email()
+        {
+          
+        }
+
+        private void EmailNotif_Audit()
+        {
+            
+            emailto = "johneubert.manalo@brother-biph.com.ph";
+            emailto = "arvin.caparros@brother-biph.com.ph";
+            emailto = "aaronpaul.anillo@brother-biph.com.ph";
+            MailMessage mail = new MailMessage("QAPS_ADMIN@brother-biph.com.ph", emailto);
+            SmtpClient client = new SmtpClient();
+            client.Port = 25;
+            client.UseDefaultCredentials = false;
+            client.Host = "10.113.10.1";
+            mail.Subject = "QAPS ADMIN NOTIFICATION";
+            mail.Body = innerString;
+            mail.IsBodyHtml = true;
+            client.Send(mail);
+            MessageBox.Show("An Email has been sent. Thank you!", "Email Notification");
+
+        }
+
+        public void EmailBody_Audit()
+        {
+            StringBuilder builder = new StringBuilder();
+            builder.AppendLine();
+            builder.Append("<h2>AN AUDIT HAS BEEN FOUND ON</h2><h1>");
+            builder.Append("<br>");
+            builder.Append("PLEASE TAKE ACTION IMMEDIATELY!<br>");
+            builder.Append("<br>");
+            builder.Append("<br>");
+            builder.Append("<b><font color=blue>MINI19,BH19 MODEL AND LINE J AND K!</b></font>");
+            builder.Append("<br>");
+            builder.Append("<b><font color=red>This is a System Generated Mail, Do not reply!</b><br></font>");
+            builder.Append("<br>Thank you!").AppendLine();
+            innerString = builder.ToString();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+                this.WindowState = FormWindowState.Maximized;
+            else
+                this.WindowState = FormWindowState.Normal;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnCamera_Click(object sender, EventArgs e)
+        {
+            var uri = @"E:\NEW_QAPS_CAM\Main_Form_Camera\Main_Form_Camera\bin\Debug\Main_Form_Camera.exe";
+            var psi = new System.Diagnostics.ProcessStartInfo();
+            psi.UseShellExecute = true;
+            psi.FileName = uri;
+            System.Diagnostics.Process.Start(psi);
+        }
+    }
+}

@@ -1,0 +1,64 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace PS_Digital_Audit
+{
+    public partial class Dashboard : Form
+    {
+        static string AAA = System.Configuration.ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString;
+        SqlConnection con = new SqlConnection("Data Source=apbiph1131;Initial Catalog=PS Digital Audit;Persist Security Info=True;User ID=saa;Password=P@ssw0rd");
+
+        Microsoft.Office.Interop.Excel.Application oXL;
+        Microsoft.Office.Interop.Excel._Workbook oWB;
+        Microsoft.Office.Interop.Excel._Worksheet oSheet;
+        public Dashboard()
+        {
+            //lblDashboard.MouseEnter += OnMouseEnterlbldashboard;
+            //lblDashboard.MouseLeave += OnMouseLeavelbldashboard;
+            InitializeComponent();
+        }
+
+        private void shipdbutton_MouseHover(object sender, EventArgs e)
+        {
+            lblDashboard.BackColor = Color.White;
+        }
+
+        private void shipdbutton_MouseLeave(object sender, EventArgs e)
+        {
+            lblDashboard.BackColor = Color.FromArgb(32, 38, 71);
+        }
+
+
+    private void Dashboard_Load(object sender, EventArgs e)
+        {
+            if(LOGIN.loginuser != null)
+            {
+                lbl_IDNum.Text = LOGIN.loginuser;
+                lbl_Name.Text = LOGIN.loginName;
+              
+              
+            }
+        }
+
+        private void lblDashboard_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Dashboard aaa = new Dashboard();
+            aaa.ShowDialog();
+            this.Close();
+        }
+
+        private void lblDashboard_MouseHover(object sender, EventArgs e)
+        {
+            
+        }
+    }
+}

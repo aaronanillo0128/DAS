@@ -1,0 +1,241 @@
+﻿using IronXL;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Drawing.Printing;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data.OleDb;
+
+
+namespace PS_Digital_Audit
+{
+    public partial class Import_Master_Data : Form
+    {
+
+        static string BBB = System.Configuration.ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString;
+        SqlConnection con = new SqlConnection("Data Source=apbiph1131;Initial Catalog=SystemTest;Persist Security Info=True;User ID=saa;Password=P@ssw0rd");
+        int ID = 0;
+        public Import_Master_Data()
+        {
+            InitializeComponent();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+                this.WindowState = FormWindowState.Maximized;
+            else
+                this.WindowState = FormWindowState.Normal;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void jeButton14_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LOGIN aaa = new LOGIN();
+            aaa.ShowDialog();
+            this.Close();
+        }
+
+        /// this method will read the excel file and copy its data into a datatable
+        private DataTable ReadExcel(string fileName)
+        {
+            WorkBook workbook = WorkBook.Load(fileName);
+            WorkSheet sheet = workbook.DefaultWorkSheet;
+            return sheet.ToDataTable(true);
+
+
+        }
+
+       
+        /// this method will choose and read the excel file
+        SqlConnection conn = new SqlConnection("Data Source=apbiph1131;Initial Catalog=PS Digital Audit;Persist Security Info=True;User ID=saa;Password=P@ssw0rd");
+        private void button6_Click(object sender, EventArgs e)      
+        {              
+            OpenFileDialog file = new OpenFileDialog(); 
+            if (file.ShowDialog() == DialogResult.OK) 
+            {
+                string fileExt = Path.GetExtension(file.FileName);
+                string fileName = Path.GetFileName(file.FileName);
+                if (fileExt.CompareTo(".xls") == 0 || fileExt.CompareTo(".xlsx") == 0)
+                {
+                    try
+                    {
+                        DataTable dtExcel = ReadExcel(file.FileName);
+                        dataGridView1.Visible = true;
+                        dataGridView1.DataSource = dtExcel;
+                        lblFileName.Text = fileName.ToString();
+
+                    }
+                    catch (Exception ex)
+                    {
+                        
+                        MessageBox.Show(ex.Message.ToString());
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please choose .xls or .xlsx file only.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error); 
+                }
+            }
+        }
+
+        private void btnUploadMaster_Click(object sender, EventArgs e)
+
+        {
+            
+            string constring = @"Data Source=apbiph1131;Initial Catalog=PS Digital Audit;Persist Security Info=True;User ID=saa;Password=P@ssw0rd";
+            SqlConnection con = new SqlConnection(constring);
+            try
+            {
+                con.Open();
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    using (SqlCommand cmd = new SqlCommand("INSERT INTO tbl_MasterList (ChecksheetNo,Process,Version,Model,AssuranceItem,DesignRequirement,InspectionMethod,RelevantQuality,GuaranteedUnit_PartCode,GuaranteedUnit_PartName,RangeRequirement,Value,Operation,Minimum,Maximum,Category,ChangeHistory) Values(@checksheetno,@Process,@version,@model, @AssuranceItem, @DesignRequirement, @InspectionMethod, @RelevantQuality, @GuaranteedUnit_PartCode, @GuaranteedUnit_PartName,@RangeRequirement,@Value,@Operation,@Minimum,@Maximum,@Category,@ChangeHistory)", con))
+                   
+
+                    {
+                        cmd.Parameters.AddWithValue("@ID", ID);
+                        cmd.Parameters.AddWithValue("@checksheetno", row.Cells["Checksheet No."].Value.ToString());
+                        cmd.Parameters.AddWithValue("@version", row.Cells["Version"].Value.ToString());
+                        cmd.Parameters.AddWithValue("@model", row.Cells["Model"].Value.ToString());
+                        cmd.Parameters.AddWithValue("@Process", row.Cells["Process"].Value.ToString());
+                        cmd.Parameters.AddWithValue("@AssuranceItem", row.Cells["Safety Important Assurance Item"].Value.ToString());
+                        cmd.Parameters.AddWithValue("@DesignRequirement", row.Cells["Design Requirement Contents"].Value.ToString());
+                        cmd.Parameters.AddWithValue("@InspectionMethod", row.Cells["Standard Inspection Method and Implementation Method"].Value.ToString());
+                        cmd.Parameters.AddWithValue("@RelevantQuality", row.Cells["Relevant Quality Characteristics"].Value.ToString());
+                        cmd.Parameters.AddWithValue("@GuaranteedUnit_PartCode", row.Cells["Guaranteed Unit (Part Code)"].Value.ToString());
+                        cmd.Parameters.AddWithValue("@GuaranteedUnit_PartName", row.Cells["Guaranteed Unit (Part Name)"].Value.ToString());
+                        cmd.Parameters.AddWithValue("@RangeRequirement", row.Cells["Value Range Requirement"].Value.ToString());
+                        cmd.Parameters.AddWithValue("@Value", row.Cells["Value"].Value.ToString());
+                        cmd.Parameters.AddWithValue("@Operation", row.Cells["Operation"].Value.ToString());
+                        cmd.Parameters.AddWithValue("@Minimum", row.Cells["Minimum"].Value.ToString());
+                        cmd.Parameters.AddWithValue("@Maximum", row.Cells["Maximum"].Value.ToString());
+                        cmd.Parameters.AddWithValue("@Category", row.Cells["Category"].Value.ToString());
+                        cmd.Parameters.AddWithValue("@ChangeHistory", row.Cells["ChangeHistory"].Value.ToString());
+                        cmd.ExecuteNonQuery();
+                       
+
+                    }
+                }
+                using (SqlCommand cmd2 = new SqlCommand("INSERT INTO tbl_Version (Version,Model,[Revision Date]) Values(@version, @model, @revdate)", con))
+
+                {
+                    if (cmbModel.Text == "")
+                    {
+                        MessageBox.Show("Complete the details to proceed!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        con.Close();
+                    }
+                    cmd2.Parameters.AddWithValue("@ID", ID);
+                    cmd2.Parameters.AddWithValue("@version", tbVersion.Text);
+                    cmd2.Parameters.AddWithValue("@model", cmbModel.Text);
+                    cmd2.Parameters.AddWithValue("@revdate", dtRevDate.Text);
+                    cmd2.ExecuteNonQuery();
+                }
+
+                    con.Close();
+                MessageBox.Show("Uploaded Successfully!", "NOTIFICATION");
+            }
+            catch (Exception ex)
+            {
+                con.Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void Import_Master_Data_Load(object sender, EventArgs e)
+        {
+
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.LightSeaGreen;
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Calibri", 11, FontStyle.Bold);
+            dataGridView1.EnableHeadersVisualStyles = false;
+
+            if (LOGIN.loginuser != null)
+            {
+                lblIDNum.Text = LOGIN.loginuser;
+                lbl_IDNum.Text = LOGIN.loginuser;
+                lbl_Name.Text = LOGIN.loginName;
+                lbl_Position.Text = LOGIN.loginAutho;
+            }
+            if (lbl_Position.Text != "Engineer")
+            {
+                button6.Enabled = false;
+            }
+        
+    }
+
+        private void button6_EnabledChanged(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+        Label clickedLabel;
+        private void lblDashboard_MouseEnter(object sender, EventArgs e)
+        {
+            Label theLabel = (Label)sender;
+            if (theLabel != clickedLabel)
+                theLabel.BackColor = Color.LightBlue;
+        }
+
+        private void lblDashboard_MouseLeave(object sender, EventArgs e)
+        {
+            Label theLabel = (Label)sender;
+            if (theLabel != clickedLabel)
+                theLabel.BackColor = Color.FromArgb(0, 188, 212);
+        }
+
+        private void lblLogout_MouseEnter(object sender, EventArgs e)
+        {
+            Label theLabel = (Label)sender;
+            if (theLabel != clickedLabel)
+                theLabel.BackColor = Color.LightBlue;
+        }
+
+        private void lblLogout_MouseLeave(object sender, EventArgs e)
+        {
+            Label theLabel = (Label)sender;
+            if (theLabel != clickedLabel)
+                theLabel.BackColor = Color.FromArgb(0, 188, 212);
+        }
+
+        private void lblDashboard_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Dashboard aaa = new Dashboard();
+            aaa.ShowDialog();
+            this.Close();
+        }
+
+        private void lblLogout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LOGIN aaa = new LOGIN();
+            aaa.ShowDialog();
+            this.Close();
+        }
+    }
+}
+
+
+
