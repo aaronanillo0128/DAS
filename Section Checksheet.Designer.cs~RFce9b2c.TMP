@@ -1,0 +1,666 @@
+﻿namespace PS_Digital_Audit
+{
+    partial class Section_Checksheet
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Section_Checksheet));
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.GBSection = new System.Windows.Forms.GroupBox();
+            this.btnSummary3 = new Finished_Good_Monitoring_System.JEButton();
+            this.btnProceedtoAudit3 = new Finished_Good_Monitoring_System.JEButton();
+            this.btnSummary2 = new Finished_Good_Monitoring_System.JEButton();
+            this.btnProceedtoAudit2 = new Finished_Good_Monitoring_System.JEButton();
+            this.btnSummary1 = new Finished_Good_Monitoring_System.JEButton();
+            this.btnProceedtoAudit1 = new Finished_Good_Monitoring_System.JEButton();
+            this.jeButton7 = new Finished_Good_Monitoring_System.JEButton();
+            this.jeButton6 = new Finished_Good_Monitoring_System.JEButton();
+            this.jeButton5 = new Finished_Good_Monitoring_System.JEButton();
+            this.cmbSection = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lbl_IDNum = new System.Windows.Forms.Label();
+            this.lbl_Name = new System.Windows.Forms.Label();
+            this.lbl_Authority = new System.Windows.Forms.Label();
+            this.btnLogout = new Finished_Good_Monitoring_System.JEButton();
+            this.btnMaster = new Finished_Good_Monitoring_System.JEButton();
+            this.btnAApproval = new Finished_Good_Monitoring_System.JEButton();
+            this.btnMonitoring = new Finished_Good_Monitoring_System.JEButton();
+            this.btnHome = new Finished_Good_Monitoring_System.JEButton();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.GBSection.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(394, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(197, 80);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button1.Enabled = false;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.Transparent;
+            this.button1.Location = new System.Drawing.Point(2, 1);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(966, 88);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button2.Enabled = false;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.Transparent;
+            this.button2.Location = new System.Drawing.Point(2, 93);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(279, 616);
+            this.button2.TabIndex = 8;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(30, 97);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(207, 204);
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
+            // 
+            // GBSection
+            // 
+            this.GBSection.BackColor = System.Drawing.Color.White;
+            this.GBSection.Controls.Add(this.btnSummary3);
+            this.GBSection.Controls.Add(this.btnProceedtoAudit3);
+            this.GBSection.Controls.Add(this.btnSummary2);
+            this.GBSection.Controls.Add(this.btnProceedtoAudit2);
+            this.GBSection.Controls.Add(this.btnSummary1);
+            this.GBSection.Controls.Add(this.btnProceedtoAudit1);
+            this.GBSection.Controls.Add(this.jeButton7);
+            this.GBSection.Controls.Add(this.jeButton6);
+            this.GBSection.Controls.Add(this.jeButton5);
+            this.GBSection.Controls.Add(this.cmbSection);
+            this.GBSection.Controls.Add(this.label2);
+            this.GBSection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GBSection.Location = new System.Drawing.Point(291, 172);
+            this.GBSection.Name = "GBSection";
+            this.GBSection.Size = new System.Drawing.Size(668, 529);
+            this.GBSection.TabIndex = 10;
+            this.GBSection.TabStop = false;
+            // 
+            // btnSummary3
+            // 
+            this.btnSummary3.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnSummary3.BackgroundColor = System.Drawing.Color.CornflowerBlue;
+            this.btnSummary3.BorderColor = System.Drawing.Color.DarkMagenta;
+            this.btnSummary3.BorderRadius = 10;
+            this.btnSummary3.BorderSize = 0;
+            this.btnSummary3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSummary3.FlatAppearance.BorderSize = 0;
+            this.btnSummary3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSummary3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSummary3.ForeColor = System.Drawing.Color.White;
+            this.btnSummary3.Location = new System.Drawing.Point(321, 438);
+            this.btnSummary3.Name = "btnSummary3";
+            this.btnSummary3.Size = new System.Drawing.Size(325, 37);
+            this.btnSummary3.TabIndex = 15;
+            this.btnSummary3.Text = "Summary";
+            this.btnSummary3.TextColor = System.Drawing.Color.White;
+            this.btnSummary3.UseVisualStyleBackColor = false;
+            this.btnSummary3.Click += new System.EventHandler(this.btnSummary3_Click);
+            // 
+            // btnProceedtoAudit3
+            // 
+            this.btnProceedtoAudit3.BackColor = System.Drawing.Color.Red;
+            this.btnProceedtoAudit3.BackgroundColor = System.Drawing.Color.Red;
+            this.btnProceedtoAudit3.BorderColor = System.Drawing.Color.DarkMagenta;
+            this.btnProceedtoAudit3.BorderRadius = 10;
+            this.btnProceedtoAudit3.BorderSize = 0;
+            this.btnProceedtoAudit3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProceedtoAudit3.FlatAppearance.BorderSize = 0;
+            this.btnProceedtoAudit3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProceedtoAudit3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProceedtoAudit3.ForeColor = System.Drawing.Color.White;
+            this.btnProceedtoAudit3.Location = new System.Drawing.Point(321, 391);
+            this.btnProceedtoAudit3.Name = "btnProceedtoAudit3";
+            this.btnProceedtoAudit3.Size = new System.Drawing.Size(325, 37);
+            this.btnProceedtoAudit3.TabIndex = 14;
+            this.btnProceedtoAudit3.Text = "Proceed to Audit";
+            this.btnProceedtoAudit3.TextColor = System.Drawing.Color.White;
+            this.btnProceedtoAudit3.UseVisualStyleBackColor = false;
+            this.btnProceedtoAudit3.Click += new System.EventHandler(this.btnProceedtoAudit3_Click);
+            // 
+            // btnSummary2
+            // 
+            this.btnSummary2.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnSummary2.BackgroundColor = System.Drawing.Color.CornflowerBlue;
+            this.btnSummary2.BorderColor = System.Drawing.Color.DarkMagenta;
+            this.btnSummary2.BorderRadius = 10;
+            this.btnSummary2.BorderSize = 0;
+            this.btnSummary2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSummary2.FlatAppearance.BorderSize = 0;
+            this.btnSummary2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSummary2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSummary2.ForeColor = System.Drawing.Color.White;
+            this.btnSummary2.Location = new System.Drawing.Point(321, 325);
+            this.btnSummary2.Name = "btnSummary2";
+            this.btnSummary2.Size = new System.Drawing.Size(325, 37);
+            this.btnSummary2.TabIndex = 13;
+            this.btnSummary2.Text = "Summary";
+            this.btnSummary2.TextColor = System.Drawing.Color.White;
+            this.btnSummary2.UseVisualStyleBackColor = false;
+            this.btnSummary2.Click += new System.EventHandler(this.btnSummary2_Click);
+            // 
+            // btnProceedtoAudit2
+            // 
+            this.btnProceedtoAudit2.BackColor = System.Drawing.Color.Red;
+            this.btnProceedtoAudit2.BackgroundColor = System.Drawing.Color.Red;
+            this.btnProceedtoAudit2.BorderColor = System.Drawing.Color.DarkMagenta;
+            this.btnProceedtoAudit2.BorderRadius = 10;
+            this.btnProceedtoAudit2.BorderSize = 0;
+            this.btnProceedtoAudit2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProceedtoAudit2.FlatAppearance.BorderSize = 0;
+            this.btnProceedtoAudit2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProceedtoAudit2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProceedtoAudit2.ForeColor = System.Drawing.Color.White;
+            this.btnProceedtoAudit2.Location = new System.Drawing.Point(321, 278);
+            this.btnProceedtoAudit2.Name = "btnProceedtoAudit2";
+            this.btnProceedtoAudit2.Size = new System.Drawing.Size(325, 37);
+            this.btnProceedtoAudit2.TabIndex = 12;
+            this.btnProceedtoAudit2.Text = "Proceed to Audit";
+            this.btnProceedtoAudit2.TextColor = System.Drawing.Color.White;
+            this.btnProceedtoAudit2.UseVisualStyleBackColor = false;
+            this.btnProceedtoAudit2.Click += new System.EventHandler(this.btnProceedtoAudit2_Click);
+            // 
+            // btnSummary1
+            // 
+            this.btnSummary1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnSummary1.BackgroundColor = System.Drawing.Color.CornflowerBlue;
+            this.btnSummary1.BorderColor = System.Drawing.Color.DarkMagenta;
+            this.btnSummary1.BorderRadius = 10;
+            this.btnSummary1.BorderSize = 0;
+            this.btnSummary1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSummary1.FlatAppearance.BorderSize = 0;
+            this.btnSummary1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSummary1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSummary1.ForeColor = System.Drawing.Color.White;
+            this.btnSummary1.Location = new System.Drawing.Point(321, 210);
+            this.btnSummary1.Name = "btnSummary1";
+            this.btnSummary1.Size = new System.Drawing.Size(325, 37);
+            this.btnSummary1.TabIndex = 11;
+            this.btnSummary1.Text = "Summary";
+            this.btnSummary1.TextColor = System.Drawing.Color.White;
+            this.btnSummary1.UseVisualStyleBackColor = false;
+            this.btnSummary1.Click += new System.EventHandler(this.btnSummary1_Click);
+            // 
+            // btnProceedtoAudit1
+            // 
+            this.btnProceedtoAudit1.BackColor = System.Drawing.Color.Red;
+            this.btnProceedtoAudit1.BackgroundColor = System.Drawing.Color.Red;
+            this.btnProceedtoAudit1.BorderColor = System.Drawing.Color.DarkMagenta;
+            this.btnProceedtoAudit1.BorderRadius = 10;
+            this.btnProceedtoAudit1.BorderSize = 0;
+            this.btnProceedtoAudit1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProceedtoAudit1.FlatAppearance.BorderSize = 0;
+            this.btnProceedtoAudit1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProceedtoAudit1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProceedtoAudit1.ForeColor = System.Drawing.Color.White;
+            this.btnProceedtoAudit1.Location = new System.Drawing.Point(321, 163);
+            this.btnProceedtoAudit1.Name = "btnProceedtoAudit1";
+            this.btnProceedtoAudit1.Size = new System.Drawing.Size(325, 37);
+            this.btnProceedtoAudit1.TabIndex = 10;
+            this.btnProceedtoAudit1.Text = "Proceed to Audit";
+            this.btnProceedtoAudit1.TextColor = System.Drawing.Color.White;
+            this.btnProceedtoAudit1.UseVisualStyleBackColor = false;
+            this.btnProceedtoAudit1.Click += new System.EventHandler(this.btnProceedtoAudit1_Click);
+            // 
+            // jeButton7
+            // 
+            this.jeButton7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.jeButton7.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.jeButton7.BorderColor = System.Drawing.Color.DarkMagenta;
+            this.jeButton7.BorderRadius = 20;
+            this.jeButton7.BorderSize = 0;
+            this.jeButton7.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.jeButton7.Enabled = false;
+            this.jeButton7.FlatAppearance.BorderSize = 0;
+            this.jeButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.jeButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jeButton7.ForeColor = System.Drawing.Color.White;
+            this.jeButton7.Location = new System.Drawing.Point(21, 387);
+            this.jeButton7.Name = "jeButton7";
+            this.jeButton7.Size = new System.Drawing.Size(270, 88);
+            this.jeButton7.TabIndex = 9;
+            this.jeButton7.Text = "Pallet Audit";
+            this.jeButton7.TextColor = System.Drawing.Color.White;
+            this.jeButton7.UseVisualStyleBackColor = false;
+            // 
+            // jeButton6
+            // 
+            this.jeButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.jeButton6.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.jeButton6.BorderColor = System.Drawing.Color.DarkMagenta;
+            this.jeButton6.BorderRadius = 20;
+            this.jeButton6.BorderSize = 0;
+            this.jeButton6.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.jeButton6.Enabled = false;
+            this.jeButton6.FlatAppearance.BorderSize = 0;
+            this.jeButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.jeButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jeButton6.ForeColor = System.Drawing.Color.White;
+            this.jeButton6.Location = new System.Drawing.Point(21, 274);
+            this.jeButton6.Name = "jeButton6";
+            this.jeButton6.Size = new System.Drawing.Size(270, 88);
+            this.jeButton6.TabIndex = 8;
+            this.jeButton6.Text = "Inline Audit";
+            this.jeButton6.TextColor = System.Drawing.Color.White;
+            this.jeButton6.UseVisualStyleBackColor = false;
+            // 
+            // jeButton5
+            // 
+            this.jeButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.jeButton5.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.jeButton5.BorderColor = System.Drawing.Color.DarkMagenta;
+            this.jeButton5.BorderRadius = 20;
+            this.jeButton5.BorderSize = 0;
+            this.jeButton5.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.jeButton5.Enabled = false;
+            this.jeButton5.FlatAppearance.BorderSize = 0;
+            this.jeButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.jeButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jeButton5.ForeColor = System.Drawing.Color.White;
+            this.jeButton5.Location = new System.Drawing.Point(21, 159);
+            this.jeButton5.Name = "jeButton5";
+            this.jeButton5.Size = new System.Drawing.Size(270, 88);
+            this.jeButton5.TabIndex = 7;
+            this.jeButton5.Text = "PS Audit";
+            this.jeButton5.TextColor = System.Drawing.Color.White;
+            this.jeButton5.UseVisualStyleBackColor = false;
+            this.jeButton5.Click += new System.EventHandler(this.jeButton5_Click);
+            // 
+            // cmbSection
+            // 
+            this.cmbSection.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSection.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSection.FormattingEnabled = true;
+            this.cmbSection.Items.AddRange(new object[] {
+            "QA",
+            "PCBA",
+            "PRINTER"});
+            this.cmbSection.Location = new System.Drawing.Point(302, 63);
+            this.cmbSection.Name = "cmbSection";
+            this.cmbSection.Size = new System.Drawing.Size(170, 39);
+            this.cmbSection.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(178, 67);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(118, 35);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Section:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(51, 327);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(162, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "User Information";
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Maiandra GD", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Location = new System.Drawing.Point(853, 2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(33, 34);
+            this.button3.TabIndex = 13;
+            this.button3.Text = "—";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Maiandra GD", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.Black;
+            this.button4.Location = new System.Drawing.Point(931, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(33, 34);
+            this.button4.TabIndex = 12;
+            this.button4.Text = "X";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Maiandra GD", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.Black;
+            this.button5.Location = new System.Drawing.Point(892, 2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(33, 34);
+            this.button5.TabIndex = 11;
+            this.button5.Text = "█";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(23, 387);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(72, 24);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "ID NO:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Transparent;
+            this.label4.Location = new System.Drawing.Point(23, 428);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(71, 24);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Name:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Transparent;
+            this.label5.Location = new System.Drawing.Point(22, 469);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(98, 24);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Authority:";
+            // 
+            // lbl_IDNum
+            // 
+            this.lbl_IDNum.AutoSize = true;
+            this.lbl_IDNum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lbl_IDNum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_IDNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_IDNum.ForeColor = System.Drawing.Color.Transparent;
+            this.lbl_IDNum.Location = new System.Drawing.Point(104, 387);
+            this.lbl_IDNum.Name = "lbl_IDNum";
+            this.lbl_IDNum.Size = new System.Drawing.Size(123, 24);
+            this.lbl_IDNum.TabIndex = 18;
+            this.lbl_IDNum.Text = "<ID Number>";
+            // 
+            // lbl_Name
+            // 
+            this.lbl_Name.AutoSize = true;
+            this.lbl_Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lbl_Name.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Name.ForeColor = System.Drawing.Color.Transparent;
+            this.lbl_Name.Location = new System.Drawing.Point(103, 428);
+            this.lbl_Name.Name = "lbl_Name";
+            this.lbl_Name.Size = new System.Drawing.Size(119, 24);
+            this.lbl_Name.TabIndex = 19;
+            this.lbl_Name.Text = "<Full Name>";
+            // 
+            // lbl_Authority
+            // 
+            this.lbl_Authority.AutoSize = true;
+            this.lbl_Authority.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lbl_Authority.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_Authority.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Authority.ForeColor = System.Drawing.Color.Transparent;
+            this.lbl_Authority.Location = new System.Drawing.Point(129, 469);
+            this.lbl_Authority.Name = "lbl_Authority";
+            this.lbl_Authority.Size = new System.Drawing.Size(67, 24);
+            this.lbl_Authority.TabIndex = 20;
+            this.lbl_Authority.Text = "<Title>";
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnLogout.BackgroundColor = System.Drawing.Color.CornflowerBlue;
+            this.btnLogout.BorderColor = System.Drawing.Color.DarkMagenta;
+            this.btnLogout.BorderRadius = 20;
+            this.btnLogout.BorderSize = 0;
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.Location = new System.Drawing.Point(87, 629);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(106, 39);
+            this.btnLogout.TabIndex = 17;
+            this.btnLogout.Text = "&Log out";
+            this.btnLogout.TextColor = System.Drawing.Color.White;
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.jeButton14_Click);
+            // 
+            // btnMaster
+            // 
+            this.btnMaster.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnMaster.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnMaster.BorderColor = System.Drawing.Color.DarkMagenta;
+            this.btnMaster.BorderRadius = 30;
+            this.btnMaster.BorderSize = 0;
+            this.btnMaster.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMaster.FlatAppearance.BorderSize = 0;
+            this.btnMaster.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaster.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMaster.ForeColor = System.Drawing.Color.White;
+            this.btnMaster.Location = new System.Drawing.Point(778, 107);
+            this.btnMaster.Name = "btnMaster";
+            this.btnMaster.Size = new System.Drawing.Size(174, 39);
+            this.btnMaster.TabIndex = 7;
+            this.btnMaster.Text = "Master Data";
+            this.btnMaster.TextColor = System.Drawing.Color.White;
+            this.btnMaster.UseVisualStyleBackColor = false;
+            this.btnMaster.Click += new System.EventHandler(this.jeButton4_Click);
+            // 
+            // btnAApproval
+            // 
+            this.btnAApproval.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnAApproval.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnAApproval.BorderColor = System.Drawing.Color.DarkMagenta;
+            this.btnAApproval.BorderRadius = 30;
+            this.btnAApproval.BorderSize = 0;
+            this.btnAApproval.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAApproval.FlatAppearance.BorderSize = 0;
+            this.btnAApproval.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAApproval.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAApproval.ForeColor = System.Drawing.Color.White;
+            this.btnAApproval.Location = new System.Drawing.Point(595, 107);
+            this.btnAApproval.Name = "btnAApproval";
+            this.btnAApproval.Size = new System.Drawing.Size(157, 39);
+            this.btnAApproval.TabIndex = 6;
+            this.btnAApproval.Text = "Audit Approval";
+            this.btnAApproval.TextColor = System.Drawing.Color.White;
+            this.btnAApproval.UseVisualStyleBackColor = false;
+            this.btnAApproval.Click += new System.EventHandler(this.jeButton3_Click);
+            // 
+            // btnMonitoring
+            // 
+            this.btnMonitoring.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnMonitoring.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnMonitoring.BorderColor = System.Drawing.Color.DarkMagenta;
+            this.btnMonitoring.BorderRadius = 30;
+            this.btnMonitoring.BorderSize = 0;
+            this.btnMonitoring.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMonitoring.FlatAppearance.BorderSize = 0;
+            this.btnMonitoring.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMonitoring.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMonitoring.ForeColor = System.Drawing.Color.White;
+            this.btnMonitoring.Location = new System.Drawing.Point(444, 107);
+            this.btnMonitoring.Name = "btnMonitoring";
+            this.btnMonitoring.Size = new System.Drawing.Size(126, 39);
+            this.btnMonitoring.TabIndex = 5;
+            this.btnMonitoring.Text = "Monitoring";
+            this.btnMonitoring.TextColor = System.Drawing.Color.White;
+            this.btnMonitoring.UseVisualStyleBackColor = false;
+            this.btnMonitoring.Click += new System.EventHandler(this.jeButton2_Click);
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnHome.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnHome.BorderColor = System.Drawing.Color.White;
+            this.btnHome.BorderRadius = 30;
+            this.btnHome.BorderSize = 0;
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.Location = new System.Drawing.Point(291, 107);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(126, 39);
+            this.btnHome.TabIndex = 4;
+            this.btnHome.Text = "Home";
+            this.btnHome.TextColor = System.Drawing.Color.White;
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.jeButton1_Click);
+            // 
+            // Section_Checksheet
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.ClientSize = new System.Drawing.Size(969, 713);
+            this.ControlBox = false;
+            this.Controls.Add(this.lbl_Authority);
+            this.Controls.Add(this.lbl_Name);
+            this.Controls.Add(this.lbl_IDNum);
+            this.Controls.Add(this.btnLogout);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.GBSection);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.btnMaster);
+            this.Controls.Add(this.btnAApproval);
+            this.Controls.Add(this.btnMonitoring);
+            this.Controls.Add(this.btnHome);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button2);
+            this.Name = "Section_Checksheet";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Section_Checksheet";
+            this.Load += new System.EventHandler(this.Section_Checksheet_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.GBSection.ResumeLayout(false);
+            this.GBSection.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
+        private Finished_Good_Monitoring_System.JEButton btnHome;
+        private Finished_Good_Monitoring_System.JEButton btnMonitoring;
+        private Finished_Good_Monitoring_System.JEButton btnAApproval;
+        private Finished_Good_Monitoring_System.JEButton btnMaster;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.GroupBox GBSection;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cmbSection;
+        private System.Windows.Forms.Label label2;
+        private Finished_Good_Monitoring_System.JEButton jeButton7;
+        private Finished_Good_Monitoring_System.JEButton jeButton6;
+        private Finished_Good_Monitoring_System.JEButton jeButton5;
+        private Finished_Good_Monitoring_System.JEButton btnSummary3;
+        private Finished_Good_Monitoring_System.JEButton btnProceedtoAudit3;
+        private Finished_Good_Monitoring_System.JEButton btnSummary2;
+        private Finished_Good_Monitoring_System.JEButton btnProceedtoAudit2;
+        private Finished_Good_Monitoring_System.JEButton btnSummary1;
+        private Finished_Good_Monitoring_System.JEButton btnProceedtoAudit1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private Finished_Good_Monitoring_System.JEButton btnLogout;
+        private System.Windows.Forms.Label lbl_IDNum;
+        private System.Windows.Forms.Label lbl_Name;
+        private System.Windows.Forms.Label lbl_Authority;
+    }
+}

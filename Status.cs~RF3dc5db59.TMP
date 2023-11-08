@@ -1,0 +1,31 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace PS_Digital_Audit
+{
+    public partial class Status : Form
+    {
+        public Status()
+        {
+            InitializeComponent();
+        }
+
+        private void jeButton1_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void jeButton2_Click(object sender, EventArgs e)
+        {
+            jeButton3.BackColor = Color.Gray;
+            jeButton4.BackColor = Color.Gray;
+        }
+    }
+}

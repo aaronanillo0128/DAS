@@ -1,0 +1,707 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\OpenCvSharp3-AnyCPU.4.0.0.20181129\build\OpenCvSharp3-AnyCPU.props" Condition="Exists('..\packages\OpenCvSharp3-AnyCPU.4.0.0.20181129\build\OpenCvSharp3-AnyCPU.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7AD25457-3906-4D97-AC40-5F0474B8A558}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PS_Digital_Audit</RootNamespace>
+    <AssemblyName>PS Digital Audit</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>\\apbiphsh07\D0_ShareBrotherGroup\19_BPS\Installer\PSAudit\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\apbiphsh07\D0_ShareBrotherGroup\19_BPS\Installer\PSAudit\</InstallUrl>
+    <ApplicationRevision>425</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>AF0867DC775AC57B2837D0457B01D4A77B31E44E</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>PS Digital Audit_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.DataSet.3.6.0\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenCvSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenCvSharp3-AnyCPU.4.0.0.20181129\lib\net40\OpenCvSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenCvSharp.Blob, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenCvSharp3-AnyCPU.4.0.0.20181129\lib\net40\OpenCvSharp.Blob.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenCvSharp.Extensions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenCvSharp3-AnyCPU.4.0.0.20181129\lib\net40\OpenCvSharp.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenCvSharp.UserInterface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenCvSharp3-AnyCPU.4.0.0.20181129\lib\net40\OpenCvSharp.UserInterface.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="2ndAudit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2ndAudit.Designer.cs">
+      <DependentUpon>2ndAudit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3rdAudit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3rdAudit.Designer.cs">
+      <DependentUpon>3rdAudit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4thAudit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4thAudit.Designer.cs">
+      <DependentUpon>4thAudit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="5thAudit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="5thAudit.Designer.cs">
+      <DependentUpon>5thAudit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="6thAudit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="6thAudit.Designer.cs">
+      <DependentUpon>6thAudit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="7thAudit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="7thAudit.Designer.cs">
+      <DependentUpon>7thAudit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add Account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Account.Designer.cs">
+      <DependentUpon>Add Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddLine.Designer.cs">
+      <DependentUpon>AddLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddModel.Designer.cs">
+      <DependentUpon>AddModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProcess.Designer.cs">
+      <DependentUpon>AddProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrequency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrequency.Designer.cs">
+      <DependentUpon>AddFrequency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApprovalLookup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApprovalLookup.Designer.cs">
+      <DependentUpon>ApprovalLookup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApprovalLookup2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApprovalLookup2.Designer.cs">
+      <DependentUpon>ApprovalLookup2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApprovalLookup3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApprovalLookup3.Designer.cs">
+      <DependentUpon>ApprovalLookup3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Audit Checksheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Audit Checksheet.Designer.cs">
+      <DependentUpon>Audit Checksheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuditLookUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuditLookUp.Designer.cs">
+      <DependentUpon>AuditLookUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buttons.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CameraDAS\Camera.cs" />
+    <Compile Include="CameraDAS\MyCAMERA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CameraDAS\MyCAMERA.Designer.cs">
+      <DependentUpon>MyCAMERA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common.cs" />
+    <Compile Include="Connection.cs" />
+    <Compile Include="CRUD.cs" />
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DE_Audit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DE_Audit.Designer.cs">
+      <DependentUpon>DE_Audit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisapprovedItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisapprovedItems.Designer.cs">
+      <DependentUpon>DisapprovedItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditMasterData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditMasterData.Designer.cs">
+      <DependentUpon>EditMasterData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgetPassword.Designer.cs">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mold_Audit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mold_Audit.Designer.cs">
+      <DependentUpon>Mold_Audit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="New Audit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="New Audit.Designer.cs">
+      <DependentUpon>New Audit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExportExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExportExcel.Designer.cs">
+      <DependentUpon>ExportExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IC_Audit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IC_Audit.Designer.cs">
+      <DependentUpon>IC_Audit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IH_Audit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IH_Audit.Designer.cs">
+      <DependentUpon>IH_Audit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Import Master Data.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Import Master Data.Designer.cs">
+      <DependentUpon>Import Master Data.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOGIN.Designer.cs">
+      <DependentUpon>LOGIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Monitoring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Monitoring.Designer.cs">
+      <DependentUpon>Monitoring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NG Maintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NG Maintenance.Designer.cs">
+      <DependentUpon>NG Maintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherPendingApproval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherPendingApproval.Designer.cs">
+      <DependentUpon>OtherPendingApproval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PCBA_Audit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCBA_Audit.Designer.cs">
+      <DependentUpon>PCBA_Audit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pending Approval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pending Approval.Designer.cs">
+      <DependentUpon>Pending Approval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pending Approval2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pending Approval2.Designer.cs">
+      <DependentUpon>Pending Approval2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pending Approval3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pending Approval3.Designer.cs">
+      <DependentUpon>Pending Approval3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProblemSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProblemSummary.Designer.cs">
+      <DependentUpon>ProblemSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProblemSummaryALL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProblemSummaryALL.Designer.cs">
+      <DependentUpon>ProblemSummaryALL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProbSumLookup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProbSumLookup.Designer.cs">
+      <DependentUpon>ProbSumLookup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PRT_Audit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRT_Audit.Designer.cs">
+      <DependentUpon>PRT_Audit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PSCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PSCategory.Designer.cs">
+      <DependentUpon>PSCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PT_Audit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PT_Audit.Designer.cs">
+      <DependentUpon>PT_Audit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResultSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResultSummary.Designer.cs">
+      <DependentUpon>ResultSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Section Checksheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Section Checksheet.Designer.cs">
+      <DependentUpon>Section Checksheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQC_Audit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SQC_Audit.Designer.cs">
+      <DependentUpon>SQC_Audit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TC_Audit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TC_Audit.Designer.cs">
+      <DependentUpon>TC_Audit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Update Audit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update Audit.Designer.cs">
+      <DependentUpon>Update Audit.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="2ndAudit.resx">
+      <DependentUpon>2ndAudit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3rdAudit.resx">
+      <DependentUpon>3rdAudit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4thAudit.resx">
+      <DependentUpon>4thAudit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="5thAudit.resx">
+      <DependentUpon>5thAudit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="6thAudit.resx">
+      <DependentUpon>6thAudit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="7thAudit.resx">
+      <DependentUpon>7thAudit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add Account.resx">
+      <DependentUpon>Add Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddLine.resx">
+      <DependentUpon>AddLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddModel.resx">
+      <DependentUpon>AddModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddProcess.resx">
+      <DependentUpon>AddProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrequency.resx">
+      <DependentUpon>AddFrequency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApprovalLookup.resx">
+      <DependentUpon>ApprovalLookup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApprovalLookup2.resx">
+      <DependentUpon>ApprovalLookup2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApprovalLookup3.resx">
+      <DependentUpon>ApprovalLookup3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Audit Checksheet.resx">
+      <DependentUpon>Audit Checksheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuditLookUp.resx">
+      <DependentUpon>AuditLookUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CameraDAS\MyCAMERA.resx">
+      <DependentUpon>MyCAMERA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DE_Audit.resx">
+      <DependentUpon>DE_Audit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisapprovedItems.resx">
+      <DependentUpon>DisapprovedItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditMasterData.resx">
+      <DependentUpon>EditMasterData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgetPassword.resx">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mold_Audit.resx">
+      <DependentUpon>Mold_Audit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New Audit.resx">
+      <DependentUpon>New Audit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExportExcel.resx">
+      <DependentUpon>ExportExcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IC_Audit.resx">
+      <DependentUpon>IC_Audit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IH_Audit.resx">
+      <DependentUpon>IH_Audit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Import Master Data.resx">
+      <DependentUpon>Import Master Data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOGIN.resx">
+      <DependentUpon>LOGIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Monitoring.resx">
+      <DependentUpon>Monitoring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NG Maintenance.resx">
+      <DependentUpon>NG Maintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherPendingApproval.resx">
+      <DependentUpon>OtherPendingApproval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCBA_Audit.resx">
+      <DependentUpon>PCBA_Audit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pending Approval.resx">
+      <DependentUpon>Pending Approval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pending Approval2.resx">
+      <DependentUpon>Pending Approval2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pending Approval3.resx">
+      <DependentUpon>Pending Approval3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProblemSummary.resx">
+      <DependentUpon>ProblemSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProblemSummaryALL.resx">
+      <DependentUpon>ProblemSummaryALL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProbSumLookup.resx">
+      <DependentUpon>ProbSumLookup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="PRT_Audit.resx">
+      <DependentUpon>PRT_Audit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PSCategory.resx">
+      <DependentUpon>PSCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PT_Audit.resx">
+      <DependentUpon>PT_Audit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResultSummary.resx">
+      <DependentUpon>ResultSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Section Checksheet.resx">
+      <DependentUpon>Section Checksheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SQC_Audit.resx">
+      <DependentUpon>SQC_Audit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TC_Audit.resx">
+      <DependentUpon>TC_Audit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update Audit.resx">
+      <DependentUpon>Update Audit.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="PS Digital Audit_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="OpenCvSharp.Blob.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="OpenCvSharp.Extensions.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="OpenCvSharp.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="OpenCvSharp.UserInterface.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="PS Digital Audit.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\OpenCvSharp3-AnyCPU.4.0.0.20181129\build\OpenCvSharp3-AnyCPU.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\OpenCvSharp3-AnyCPU.4.0.0.20181129\build\OpenCvSharp3-AnyCPU.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

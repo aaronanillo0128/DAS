@@ -1,0 +1,187 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Net.Mail;
+using System.Drawing.Printing;
+using System.Data.OleDb;
+using System.IO;
+
+
+namespace PS_Digital_Audit
+{
+    public partial class Section_Checksheet : Form
+    {
+
+        
+        static string AAA = System.Configuration.ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString;
+        string cs = "Data Source=apbiph1131;Initial Catalog=PS Digital Audit;Persist Security Info=True;User ID=saa;Password=P@ssw0rd";
+        SqlConnection con = new SqlConnection("Data Source=apbiph1131;Initial Catalog=PS Digital Audit;Persist Security Info=True;User ID=saa;Password=P@ssw0rd");
+ 
+
+
+        int ID = 0;
+
+        Microsoft.Office.Interop.Excel.Application oXL;
+        Microsoft.Office.Interop.Excel._Workbook oWB;
+        Microsoft.Office.Interop.Excel._Worksheet oSheet;
+        public Section_Checksheet()
+        {
+            InitializeComponent();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+                this.WindowState = FormWindowState.Maximized;
+            else
+                this.WindowState = FormWindowState.Normal;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            LoadUserProfile();
+        }
+
+
+        public static string IDNum;
+        public static string ADID;
+        public static string Username;
+        public static string password;
+        public static string Full_Name;
+        public static string Section;
+        public static string Authority;
+        public static string Email;
+        public static string position;
+        public static string Department;
+        public void LoadUserProfile()
+        {
+
+                     SqlConnection con1 = new SqlConnection("Data Source=apbiph1131;Initial Catalog=PS Digital Audit;Persist Security Info=True;User ID=saa;Password=P@ssw0rd");
+            
+                }
+            
+           
+            
+        
+        private void jeButton14_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LOGIN aaa = new LOGIN();
+            aaa.ShowDialog();
+            this.Close();
+        }
+
+        private void jeButton5_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Section_Checksheet_Load(object sender, EventArgs e)
+        {
+            if (LOGIN.loginuser != null)
+            {
+                lbl_IDNum.Text = LOGIN.loginuser;
+                lbl_Name.Text = LOGIN.loginuser;
+                lbl_Authority.Text = LOGIN.loginuser;
+            }
+
+            InitializeComponent();
+          
+        }
+
+        private void jeButton4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Import_Master_Data aaa = new Import_Master_Data();
+            aaa.ShowDialog();
+            this.Close();
+        }
+
+        private void jeButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Section_Checksheet aaa = new Section_Checksheet();
+            aaa.ShowDialog();
+            this.Close();
+        }
+
+        private void jeButton2_Click(object sender, EventArgs e)
+        {
+
+           
+        }
+
+        private void jeButton3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Pending_Approval aaa = new Pending_Approval();
+            aaa.ShowDialog();
+            this.Close();
+        }
+
+        private void btnProceedtoAudit1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PSCategory aaa = new PSCategory();
+            aaa.ShowDialog();
+            this.Close();
+        }
+
+        private void btnProceedtoAudit2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PSCategory aaa = new PSCategory();
+            aaa.ShowDialog();
+            this.Close();
+        }
+
+        private void btnProceedtoAudit3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PSCategory aaa = new PSCategory();
+            aaa.ShowDialog();
+            this.Close();
+        }
+
+        private void btnSummary1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ResultSummary aaa = new ResultSummary();
+            aaa.ShowDialog();
+            this.Close();
+        }
+
+        private void btnSummary2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ResultSummary aaa = new ResultSummary();
+            aaa.ShowDialog();
+            this.Close();
+        }
+
+        private void btnSummary3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ResultSummary aaa = new ResultSummary();
+            aaa.ShowDialog();
+            this.Close();
+        }
+    }
+}

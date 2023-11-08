@@ -1,0 +1,113 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Net.Mail;
+using System.Drawing.Printing;
+using System.Data.OleDb;
+using System.IO;
+
+
+namespace PS_Digital_Audit
+{
+    public partial class PSCategory : Form
+    {
+        static string AAA = System.Configuration.ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString;
+        string cs = "Data Source=apbiph1131;Initial Catalog=PS Digital Audit;Persist Security Info=True;User ID=saa;Password=P@ssw0rd";
+        SqlConnection con = new SqlConnection("Data Source=apbiph1131;Initial Catalog=PS Digital Audit;Persist Security Info=True;User ID=saa;Password=P@ssw0rd");
+        SqlCommand cmd;
+        SqlDataAdapter adapt;
+        DataTable dt;
+
+
+        int ID = 0;
+        public PSCategory()
+        {
+            InitializeComponent();
+        }
+
+        private void jeButton5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Audit_Checksheet aaa = new Audit_Checksheet();
+            aaa.ShowDialog();
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+                this.WindowState = FormWindowState.Maximized;
+            else
+                this.WindowState = FormWindowState.Normal;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void jeButton14_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LOGIN aaa = new LOGIN();
+            aaa.ShowDialog();
+            this.Close();
+        }
+
+        private void jeButton6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Section_Checksheet aaa = new Section_Checksheet();
+            aaa.ShowDialog();
+            this.Close();
+        }
+
+        private void jeButton4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Import_Master_Data aaa = new Import_Master_Data();
+            aaa.ShowDialog();
+            this.Close();
+        }
+
+        private void jeButton3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Pending_Approval aaa = new Pending_Approval();
+            aaa.ShowDialog();
+            this.Close();
+        }
+
+        private void jeButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Section_Checksheet aaa = new Section_Checksheet();
+            aaa.ShowDialog();
+            this.Close();
+        }
+
+        private void PSCategory_Load(object sender, EventArgs e)
+        {
+            if (LOGIN.loginuser != null)
+            {
+                lbl_IDNum.Text = LOGIN.loginuser;
+                lbl_Name.Text = LOGIN.loginName;
+                lbl_Autho.Text = LOGIN.loginAutho;
+             
+             
+            }
+        }
+    }
+}
